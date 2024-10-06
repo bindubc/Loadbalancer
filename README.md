@@ -17,6 +17,8 @@
 ### Introduction
 Welcome to the repository for the High-Availability Load Balancer project, created during the Akamai Hackathon, Oct 2024. Our project aims to set up a robust and scalable load balancer that meets the specifications for traffic management, performance, reliability, logging, security, and programmatic interaction, ensuring high availability for public-facing applications.
 
+This project demonstrates setting up a high-availability load balancer using Linode VMs. It includes automated failover and dynamic VM creation when CPU utilization exceeds a threshold, ensuring that the system scales up during high traffic and scales down during low traffic.
+
 <a name="s2"></a>
 ### Key Requirement
 
@@ -56,13 +58,53 @@ Welcome to the repository for the High-Availability Load Balancer project, creat
  
 <a name="s4"></a>
 ### Architecture Overview
+
+The architecture consists of:
+- A primary load balancer that handles incoming traffic.
+- A secondary load balancer for failover.
+- Automated scripts that monitor CPU usage and create new VMs as needed.
+- Secure configuration with SSL, VM hardening, and logging.
+  
 <a name="s5"></a>
 ### Prerequisites
+
+- Linode account with API access.
+- Bash shell and `curl` installed.
+- Basic knowledge of Nginx or HAProxy configuration.
+
+  
 <a name="s6"></a>
 ### Setup Instructions
+
+1. **Create Primary and Secondary VMs:**
+   - Run the `create_linode_vm.sh` script to create the initial primary and secondary VMs.
+   
+2. **Configure the Load Balancer:**
+   - Set up Nginx or HAProxy using the configuration files in the `config/` directory.
+
+3. **Install Monitoring:**
+   - Use the `monitoring/install_netdata.sh` script to set up Netdata or customize for Prometheus.
+
+4. **Automate Scaling:**
+   - Schedule the `cpu_monitor.sh` script using Cron to monitor CPU and trigger scaling.
+
+
 <a name="s7"></a>
 ### Usage Guide
+- To start monitoring:
+  ```bash
+  ./infrastructure/cpu_monitor.sh
+  ```
+- To manually create a new VM:
+```bash
+./infrastructure/create_linode_vm.sh
+```
 
+To update load balancer configuration:
+```bash
+
+./scripts/update_lb_config.sh
+```
 <a name="s8"></a>
 ### Technologies Used
 - Linode (for VM deployment)
