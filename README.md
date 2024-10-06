@@ -1,10 +1,23 @@
 # Loadbalancer Hackathon Assignment
 
+### Contents
+* [__Project Overview__](#s1)
+*  [__Key Requirement and Feature__](#s2)
+*  [__Architecture Overview__](#s4)
+* [ __Prerequisites and Setup Instructions__](#s5)
+* [__Usage Guide__](#s7)
+* [__Technologies Used__](#s8)
+* [__Contact__](#s9)
+*  [__Acknowldgement__](#s10)
+
 ### Project Name: High-Availability Load Balancer
 
-### Description
+
+<a name="s1"></a>
+### Introduction
 Welcome to the repository for the High-Availability Load Balancer project, created during the Akamai Hackathon, Oct 2024. Our project aims to set up a robust and scalable load balancer that meets the specifications for traffic management, performance, reliability, logging, security, and programmatic interaction, ensuring high availability for public-facing applications.
 
+<a name="s2"></a>
 ### Key Requirement
 
 
@@ -20,6 +33,7 @@ Welcome to the repository for the High-Availability Load Balancer project, creat
     * At Layer 4: Ability to allow/deny requests based on IP address.
     * At Layer 7: Ability to look at HTTP cookies and ensure session stickiness is maintained.
 
+<a name="s3"></a>
 ### Features
 - **Traffic Management**: 
   - Allow traffic only on Port 443 (HTTPS) with a valid SSL certificate deployed and automated renewal via Let's Encrypt.
@@ -39,7 +53,17 @@ Welcome to the repository for the High-Availability Load Balancer project, creat
 - **Layered Rules**: 
   - Implement Layer 4 rules to allow/deny requests based on IP addresses.
   - Implement Layer 7 rules to examine HTTP cookies and maintain session stickiness.
+ 
+<a name="s4"></a>
+### Architecture Overview
+<a name="s5"></a>
+### Prerequisites
+<a name="s6"></a>
+### Setup Instructions
+<a name="s7"></a>
+### Usage Guide
 
+<a name="s8"></a>
 ### Technologies Used
 - Linode (for VM deployment)
 - HAProxy (for load balancing)
@@ -47,20 +71,15 @@ Welcome to the repository for the High-Availability Load Balancer project, creat
 - Let's Encrypt (for SSL certificates)
 - [Additional technologies as needed,[### TBD] ]
 
-### Installation <tentaively> 
-To get started with this project, follow these steps:
-1. Clone the repository: `git clone [repository URL]`
-2. Install dependencies: `[installation command, e.g., npm install or pip install -r requirements.txt]`
-3. Configure the load balancer settings in `config.yaml` (or appropriate config file).
-4. Deploy the application: `[run command]`
 
 
-
-### Team Members
+<a name="s9"></a>
+### Contact Information and Team Members
 - Bindu BC - Software Engineer
 - Khagesh Kumar - Software Engineer
 - Mohit Sahu - Software Engineer
 
+<a name="s10"></a>
 ### Acknowledgments
 Special thanks to Akamai Hackathon Team
 
