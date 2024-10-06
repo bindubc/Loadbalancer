@@ -54,8 +54,7 @@ To get started with this project, follow these steps:
 3. Configure the load balancer settings in `config.yaml` (or appropriate config file).
 4. Deploy the application: `[run command]`
 
-### Contributing
-We welcome contributions! Please feel free to submit a pull request or open an issue for any suggestions or improvements.
+
 
 ### Team Members
 - Bindu BC - Software Engineer
@@ -65,14 +64,4 @@ We welcome contributions! Please feel free to submit a pull request or open an i
 ### Acknowledgments
 Special thanks to Akamai Hackathon Team
 
-### Prerequisites
-To participate effectively, team members should have a basic understanding of:
-- Linode account management
-- Spinning up and securing a Virtual Machine
-- Creating SSH keys
-- Basic concepts of how a load balancer operates
-
----
-
-Feel free to modify any sections as necessary and fill in any specific details, especially the team member names and roles!
 
